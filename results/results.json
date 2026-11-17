@@ -1,0 +1,119 @@
+{
+  "cells": 124,
+  "split_sizes": {
+    "primary_test": 42,
+    "train": 42,
+    "secondary_test": 40
+  },
+  "life_range": [
+    148,
+    2237
+  ],
+  "life_mean": 801.6,
+  "corr_logvar_loglife": -0.927,
+  "corr_capacity100_loglife": 0.266,
+  "models": {
+    "naive_mean": {
+      "train": {
+        "rmse_cycles": 319.3,
+        "mape_pct": 32.9
+      },
+      "primary_test": {
+        "rmse_cycles": 397.3,
+        "mape_pct": 40.4
+      },
+      "secondary_test": {
+        "rmse_cycles": 469.6,
+        "mape_pct": 31.1
+      }
+    },
+    "variance": {
+      "train": {
+        "rmse_cycles": 106.6,
+        "mape_pct": 14.4
+      },
+      "primary_test": {
+        "rmse_cycles": 139.6,
+        "mape_pct": 14.6
+      },
+      "secondary_test": {
+        "rmse_cycles": 199.2,
+        "mape_pct": 11.4
+      }
+    },
+    "discharge": {
+      "train": {
+        "rmse_cycles": 65.5,
+        "mape_pct": 8.8
+      },
+      "primary_test": {
+        "rmse_cycles": 111.8,
+        "mape_pct": 12.8
+      },
+      "secondary_test": {
+        "rmse_cycles": 190.1,
+        "mape_pct": 13.2
+      }
+    },
+    "full": {
+      "train": {
+        "rmse_cycles": 50.2,
+        "mape_pct": 6.1
+      },
+      "primary_test": {
+        "rmse_cycles": 113.9,
+        "mape_pct": 10.1
+      },
+      "secondary_test": {
+        "rmse_cycles": 184.2,
+        "mape_pct": 11.0
+      }
+    },
+    "capacity_only": {
+      "train": {
+        "rmse_cycles": 302.5,
+        "mape_pct": 25.8
+      },
+      "primary_test": {
+        "rmse_cycles": 388.7,
+        "mape_pct": 29.9
+      },
+      "secondary_test": {
+        "rmse_cycles": 535.4,
+        "mape_pct": 40.3
+      }
+    },
+    "gbm_full": {
+      "train": {
+        "rmse_cycles": 3.7,
+        "mape_pct": 0.4
+      },
+      "primary_test": {
+        "rmse_cycles": 95.2,
+        "mape_pct": 9.2
+      },
+      "secondary_test": {
+        "rmse_cycles": 181.3,
+        "mape_pct": 10.6
+      }
+    }
+  },
+  "cv_train_mape_pct": {
+    "variance": 16.3,
+    "discharge": 11.7,
+    "full": 10.0,
+    "capacity_only": 28.5,
+    "gbm_full": 9.8
+  },
+  "chosen_by_train_cv": "gbm_full",
+  "screening": {
+    "weak_if_life_below": 550,
+    "test_cells": 82,
+    "weak_cells": 22,
+    "precision": 0.71,
+    "recall": 1.0,
+    "f1": 0.83,
+    "threshold_log10_var": -3.74
+  },
+  "test_time_saving_pct": 87.5
+}
